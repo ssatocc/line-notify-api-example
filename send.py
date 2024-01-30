@@ -10,8 +10,10 @@ def main():
 
     headers = {"Authorization": f"Bearer {access_token}"}
     data = {"message": "Hello, World!"}
-    files = {'imageFile': open("./image/sample.png", 'rb')}
-    requests.post("https://notify-api.line.me/api/notify", headers=headers, data=data, files=files)
+    files = {"imageFile": open("./image/sample.png", "rb")}
+    requests.post(
+        "https://notify-api.line.me/api/notify", headers=headers, data=data, files=files
+    )
 
 
 if __name__ == "__main__":
