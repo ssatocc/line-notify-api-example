@@ -9,8 +9,9 @@ fi
 
 MSG="Hello, World!"
 IMAGE_FILE="./image/sample.png"
+ENDPOINT="https://notify-api.line.me/api/notify"
 
 curl -X POST -H "Authorization: Bearer $ACCESS_TOKEN" \
     -F "message=$MSG" \
     -F "imageFile=@$IMAGE_FILE" \
-    "https://notify-api.line.me/api/notify"
+    $ENDPOINT
